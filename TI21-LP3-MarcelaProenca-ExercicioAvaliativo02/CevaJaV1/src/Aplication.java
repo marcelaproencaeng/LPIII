@@ -95,13 +95,6 @@ public class Aplication {
 
         PedidoService service = new PedidoService();
         service.efetuarPedido(pedido1);
-        service.efetuarPedido(pedido2);
-        service.efetuarPedido(pedido3);
-        service.efetuarPedido(pedido4);
-        usuario.pedidoAceito();
-        usuario2.pedidoAceito();
-        usuario3.pedidoAceito();
-        usuario4.pedidoAceito();
         pedido1.calcularValorTotal();
         pedido2.calcularValorTotal();
         pedido3.calcularValorTotal();

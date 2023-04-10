@@ -5,12 +5,12 @@ import Enuns.StatusPedido;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public abstract class Pessoa {
+public class Pessoa {
 
     //instanciar pessoa-instanciar usuario ou pessoa
 
     private String nome;
-    protected LocalDate dataNascimento;
+    private LocalDate dataNascimento;
     private Endereco endereco;
 
     private String documento;
@@ -66,16 +66,21 @@ public abstract class Pessoa {
     public static boolean pedidoAceito() throws RuntimeException {
         if (StatusPedido.ACEITO.equals(true)) {
             return true;
-
         } else {
-
             return false;
         }
     }
 
-    public abstract boolean possuiPedido() throws RuntimeException;
+    public boolean possuiPedido() throws RuntimeException {
+
+        if (calcularIdade() >= 18) {
+            return true;
+        } else {
 
 
+            return false;
+        }
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,7 +1,5 @@
 package model;
 
-import Enuns.StatusPedido;
-
 import java.time.LocalDate;
 
 public class Usuario extends Pessoa {
@@ -31,16 +29,5 @@ public class Usuario extends Pessoa {
         this.senha = senha;
     }
 
-    @Override
-    public boolean possuiPedido() throws RuntimeException {
 
-        if (calcularIdade() >= 18) {
-            return true;
-
-        } else {
-
-
-            return false;
-        }
-    }
 }

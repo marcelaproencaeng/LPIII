@@ -8,9 +8,16 @@ import model.Pessoa;
 public class PedidoService {
 
 
-    public void efetuarPedido(Pedido pedido) {
+    public boolean efetuarPedido(Pedido pedido1, Pedido pedido2, Pedido pedido3, Pedido pedido4) throws RuntimeException {
+        PedidoService service = new PedidoService();
+        service.efetuarPedido(pedido1, pedido2, pedido3, pedido4);
+        if (Pessoa.pedidoAceito()==true) {
+            return true;
 
-        System.out.println("Pedido #:" + pedido.getId() + "efetuado com sucesso!");
-        System.out.println("Valor total:" + pedido.calcularValorTotal());
+
+        } else {
+            return false;
+        }
     }
+
 }

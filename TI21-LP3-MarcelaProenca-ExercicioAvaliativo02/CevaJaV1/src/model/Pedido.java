@@ -90,7 +90,7 @@ public class Pedido {
             BigDecimal bigResult = big1.add(big2);
 
 
-
+            //valorTotalPedido = (valorTotalPedido + produto.getValor());
             System.out.println(produto.getNome());
             // Somar todos os produtos
             valorTotalPedido = valorTotalPedido.add(produto.getValor());
